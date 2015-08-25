@@ -6,7 +6,19 @@
     <title>@ViewBag.Title - GoodQRma</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.core.css")"
+          rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.datepicker.css")"
+          rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.theme.css")"
+          rel="stylesheet" type="text/css" />
 
+    <script src="@Url.Content("~/Scripts/jquery.ui.core.min.js")"
+            type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ui.datepicker.min.js")"
+            type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DatePickerReady.js")"
+            type="text/javascript"></script>
 </head>
 <body>
     @*<div class="navbar navbar-inverse navbar-fixed-top">
@@ -145,9 +157,8 @@
                     <form action="results.cfm" method="post">
                         Keywords <input type="text" name="keywords" class="roundSFPx" size="35" maxlength="75" alt="Enter Keywords to search" title="Enter Keywords to search" /><br clear="all" />
                         <br /> </n>
-                        Start_Date <input type="date" name=" date" size="12" class="roundSFPx" maxlength="25" alt="Search by date"><br /></n></n></br><br />
-                      StartDate<input type="date" id="datepicker" />
-                        End_Date <input type="date" name=" date" size="12" class="roundSFPx" maxlength="25" alt="Search by date"><br /></n></n></br><br />
+                        Date <input class="datefield" data-val="true" data-val-required="Date is required"
+       id="Date" name="Date" type="date" value="1/11/1989" />  
                         City <input type=" text" name="city" size="12" class="roundSFPx" maxlength="25" alt="Search by city" title="Search by City" />&nbsp;&nbsp;<br /></n></n></br><br />
                         State <select name="states" class="roundSFPx" title="Search by selecting a State">
                             <br /></n></n></br>
